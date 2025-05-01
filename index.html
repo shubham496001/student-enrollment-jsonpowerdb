@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Enrollment Form</title>
+    <script src="script.js"></script>
+    <style>
+        input, button {
+            margin: 5px;
+            padding: 8px;
+        }
+        input:disabled {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body onload="resetForm()">
+    <h2>Student Enrollment Form</h2>
+    <form id="enrollmentForm">
+        <label>Roll No: <input type="text" id="rollNo" onblur="getStudent()" /></label><br>
+        <label>Full Name: <input type="text" id="fullName" disabled /></label><br>
+        <label>Class: <input type="text" id="studentClass" disabled /></label><br>
+        <label>Birth Date: <input type="date" id="birthDate" disabled /></label><br>
+        <label>Address: <input type="text" id="address" disabled /></label><br>
+        <label>Enrollment Date: <input type="date" id="enrollmentDate" disabled /></label><br>
+        <button type="button" onclick="saveData()" id="btnSave" disabled>Save</button>
+        <button type="button" onclick="updateData()" id="btnUpdate" disabled>Update</button>
+        <button type="button" onclick="resetForm()" id="btnReset">Reset</button>
+    </form>
+</body>
+</html>
